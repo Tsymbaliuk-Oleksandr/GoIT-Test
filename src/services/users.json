@@ -1,0 +1,86 @@
+[
+  {
+    "user": "Elon Mask",
+    "tweets": 777,
+    "followers": 100500,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-boy-6813061_p2wy58.png",
+    "id": "1"
+  },
+  {
+    "user": "Keanu Reeves",
+    "tweets": 555,
+    "followers": 800300,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-gentleman-6812921_hgwzwn.png",
+    "id": "2"
+  },
+  {
+    "user": "Joe Biden",
+    "tweets": 333,
+    "followers": 1000001,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-boy-6812867_rerxuh.png",
+    "id": "3"
+  },
+  {
+    "user": "Bill Gates",
+    "tweets": 1000,
+    "followers": 7777,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622609/free-icon-youth-6812885_gtidxs.png",
+    "id": "4"
+  },
+  {
+    "user": "Mark Zuckerberg",
+    "tweets": 999,
+    "followers": 3003,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-student-6812905_v8296d.png",
+    "id": "5"
+  },
+  {
+    "user": "John Depp",
+    "tweets": 2222,
+    "followers": 65655,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-brother-6812973_tg7pmd.png",
+    "id": "6"
+  },
+  {
+    "user": "Brad Pitt",
+    "tweets": 7788,
+    "followers": 75995,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622609/free-icon-guy-6812873_yyefwj.png",
+    "id": "7"
+  },
+  {
+    "user": "Angelina Jolie",
+    "tweets": 5533,
+    "followers": 9977,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-lady-6812903_u0dwux.png",
+    "id": "8"
+  },
+  {
+    "user": "Win Dizel",
+    "tweets": 9997,
+    "followers": 99991,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-boy-6813004_njl58l.png",
+    "id": "9"
+  },
+  {
+    "user": "Jennifer Aniston",
+    "tweets": 87288,
+    "followers": 79987,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622609/free-icon-teenager-6812892_tv4vv2.png",
+    "id": "10"
+  },
+  {
+    "user": "Matthew Perry",
+    "tweets": 86744,
+    "followers": 65997,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682622608/free-icon-boy-6812869_he9x52.png",
+    "id": "11"
+  },
+  {
+    "user": "Jackie Chan",
+    "tweets": 99755,
+    "followers": 557799,
+    "avatar": "https://res.cloudinary.com/deyxjvc7t/image/upload/v1682624292/free-icon-man-6812866_hwxrzj.png",
+    "id": "12"
+  }
+]
