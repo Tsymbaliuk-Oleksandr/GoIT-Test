@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { CardForm } from '../CardForm/CardForm';
-import users from '../../services/users.json';
+import { useSelector } from 'react-redux';
+import { getFollowers } from 'redux/userSelectors';
+import { Container } from './Cardlist.styled';
 
 export const CardList = () => {
-  const [userData, setUserData] = useState([]);
-
-  useEffect(() => {
-    setUserData(users);
-  }, []);
+  const userData = useSelector(getFollowers);
+  // console.log(userData);
 
   return (
-    <>
+    <Container>
       {userData.map(user => (
         <CardForm
           key={user.id}
@@ -21,6 +20,6 @@ export const CardList = () => {
           isFollow={user.isFollow}
         />
       ))}
-    </>
+    </Container>
   );
 };

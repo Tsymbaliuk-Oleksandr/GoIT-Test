@@ -1,10 +1,18 @@
 import React from 'react';
-import { CardForm } from './CardForm/CardForm';
+import { CardList } from './CardList/CardList';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchUsers } from 'redux/operations';
 
 export const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
+
   return (
     <>
-      <CardForm />
+      <CardList />
     </>
   );
 };

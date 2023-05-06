@@ -8,25 +8,7 @@ import {
   FollowersContainer,
 } from './CardForm.styled.js';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { addFollow, removeFollow } from 'redux/userSlice.js';
-import { getFollowers, isFollower } from 'redux/userSelectors.js';
-
-export const CardForm = ({ id, avatar, tweets }) => {
-  const followers = useSelector(getFollowers);
-  const isFollow = useSelector(isFollower);
-
-  const dispatch = useDispatch();
-
-  const onToggleFollowing = () => {
-    if (isFollow) {
-      dispatch(removeFollow());
-    }
-    if (!isFollow) {
-      dispatch(addFollow());
-    }
-  };
-
+export const CardForm = ({ id, avatar, tweets, followers }) => {
   const newData = followers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
   return (
@@ -34,11 +16,10 @@ export const CardForm = ({ id, avatar, tweets }) => {
       <Logo />
       <PictureForm />
       <UserIcon avatar={avatar} />
-      <TweetsContainer tweets={tweets}>777 tweets</TweetsContainer>
-      <FollowersContainer followers={followers}>
-        {newData} Followers
-      </FollowersContainer>
-      <Button isFollow={isFollow} onClick={onToggleFollowing} />
+      <TweetsContainer>{tweets} Tweets</TweetsContainer>
+      <FollowersContainer>{newData} Followers</FollowersContainer>
+      {/* <Button isFollow={isFollow} onClick={onToggleFollowing} /> */}
+      <Button>Follow</Button>
     </Container>
   );
 };

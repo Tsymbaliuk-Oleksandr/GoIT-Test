@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-const initialState = {
-  followers: 100500,
-  isFollower: false,
-};
+import { fetchUsers } from './operations';
 
 export const userSlice = createSlice({
-  name: 'user',
-  initialState,
+  name: 'users',
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+  },
   reducers: {
     addFollow: state => {
       state.followers += 1;
@@ -16,6 +16,19 @@ export const userSlice = createSlice({
     removeFollow: state => {
       state.followers -= 1;
       state.isFollower = false;
+    },
+  },
+  extraReducers: {
+    [fetchUsers.pending]: state => {
+      state.isLoading = true;
+    },
+    [fetchUsers.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.items = payload;
+    },
+    [fetchUsers.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.error = payload;
     },
   },
 });
