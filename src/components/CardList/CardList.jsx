@@ -17,7 +17,6 @@ export const CardList = () => {
           avatar={user.avatar}
           tweets={user.tweets}
           followers={user.followers}
-          isFollow={user.isFollow}
         />
       ))}
     </Container>
