@@ -7,6 +7,7 @@ export const userSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    page: 1,
   },
   reducers: {
     addFollow: state => {
@@ -17,6 +18,9 @@ export const userSlice = createSlice({
       state.followers -= 1;
       state.isFollower = false;
     },
+    togglePage: (state, { payload }) => {
+      state.page = payload;
+    },
   },
   extraReducers: {
     [fetchUsers.pending]: state => {
@@ -24,7 +28,7 @@ export const userSlice = createSlice({
     },
     [fetchUsers.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
-      state.items = payload;
+      state.items.push(...payload);
     },
     [fetchUsers.rejected]: (state, { payload }) => {
       state.isLoading = false;
@@ -33,45 +37,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const { addFollow, removeFollow } = userSlice.actions;
+export const { addFollow, removeFollow, togglePage } = userSlice.actions;
 
 export default userSlice.reducer;
-
-// export const userSlice = createSlice({
-//   name: 'users',
-//   initialState: {
-//     items: [],
-//     isLoading: false,
-//     error: null,
-//     isFollower: false,
-//   },
-//   reducers: {
-//     addFollow: (state, { payload }) => {
-//       const findUser = state.items.find(user => user.id === payload);
-//       findUser.followers += 1;
-//       state.isFollower = true;
-//     },
-//     removeFollow: (state, { payload }) => {
-//       const findUser = state.items.find(user => user.id === payload);
-//       findUser.followers -= 1;
-//       state.isFollower = false;
-//     },
-//   },
-//   extraReducers: {
-//     [fetchUsers.pending]: state => {
-//       state.isLoading = true;
-//     },
-//     [fetchUsers.fulfilled]: (state, { payload }) => {
-//       state.isLoading = false;
-//       state.items = payload;
-//     },
-//     [fetchUsers.rejected]: (state, { payload }) => {
-//       state.isLoading = false;
-//       state.error = payload;
-//     },
-//   },
-// });
-
-// export const { addFollow, removeFollow } = userSlice.actions;
-
-// export default userSlice.reducer;
